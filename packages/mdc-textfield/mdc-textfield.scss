@@ -318,6 +318,18 @@ $mdc-textfield-dense-icon-padding: 38px;
 }
 
 .mdc-textfield--with-leading-icon {
+  .mdc-textfield__leading-icon:not([tabindex]),
+  .mdc-textfield__leading-icon[tabindex="-1"] {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .mdc-textfield__trailing-icon:not([tabindex]),
+  .mdc-textfield__trailing-icon[tabindex="-1"] {
+    pointer-events: none;
+    cursor: default;
+  }
+
   .mdc-textfield__input {
     @include mdc-rtl-reflexive-box(padding, left, $mdc-textfield-icon-padding);
   }

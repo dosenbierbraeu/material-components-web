@@ -33,8 +33,8 @@ export default class MDCTextfieldFoundation extends MDCFoundation {
       addClassToLabel: (/* className: string */) => {},
       removeClassFromLabel: (/* className: string */) => {},
       eventTargetHasClass: (/* target: HTMLElement, className: string */) => {},
-      registerTextFieldInteractionHandler: () => {},
-      deregisterTextFieldInteractionHandler: () => {},
+      registerTextFieldClickHandler: () => {},
+      deregisterTextFieldClickHandler: () => {},
       notifyLeadingIconAction: () => {},
       notifyTrailingIconAction: () => {},
       addClassToHelptext: (/* className: string */) => {},
@@ -71,7 +71,7 @@ export default class MDCTextfieldFoundation extends MDCFoundation {
     this.adapter_.registerInputBlurHandler(this.inputBlurHandler_);
     this.adapter_.registerInputInputHandler(this.inputInputHandler_);
     this.adapter_.registerInputKeydownHandler(this.inputKeydownHandler_);
-    this.adapter_.registerTextFieldInteractionHandler(this.textFieldInteractionHandler_);
+    this.adapter_.registerTextFieldClickHandler(this.textFieldInteractionHandler_);
 
     // Ensure label does not collide with any pre-filled value.
     if (this.getNativeInput_().value) {
@@ -85,7 +85,7 @@ export default class MDCTextfieldFoundation extends MDCFoundation {
     this.adapter_.deregisterInputBlurHandler(this.inputBlurHandler_);
     this.adapter_.deregisterInputInputHandler(this.inputInputHandler_);
     this.adapter_.deregisterInputKeydownHandler(this.inputKeydownHandler_);
-    this.adapter_.deregisterTextFieldInteractionHandler(this.textFieldInteractionHandler_);
+    this.adapter_.deregisterTextFieldClickHandler(this.textFieldInteractionHandler_);
   }
 
   handleTextFieldInteraction_(evt) {
